@@ -1,0 +1,8 @@
+node_modules/
+*.log
+.DS_Store
+.dsh/
+npm-debug.log*
+
+# Kişisel kurulum notu — repoya dahil değil
+README-KURULUM.md
