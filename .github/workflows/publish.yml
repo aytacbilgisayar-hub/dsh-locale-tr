@@ -1,5 +1,8 @@
 name: Publish to npm
 
+# npm Trusted Publishing (OIDC) ile yayınlar — NPM_TOKEN secret'ı GEREKMEZ.
+# Çalışması için npm'de paketin "Trusted Publisher" ayarında bu repo + bu iş
+# akışı dosyası (publish.yml) tanımlı olmalıdır.
 on:
   release:
     types: [published]
@@ -10,12 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      id-token: write        # OIDC için şart
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           registry-url: https://registry.npmjs.org
+      - run: npm install -g npm@latest   # OIDC trusted publishing icin npm >= 11.5.1
       - run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
