@@ -21,19 +21,22 @@ her metin `fallback: en` sayesinde İngilizce görünür — hiçbir şey kırı
 `dsh`'nin ev dizini `$DSH_HOME` (varsayılan: `~/.dsh`). Web profilini kullandığı
 varsayılır (`$DSH_HOME/profiles/web`).
 
-1. Bu depoyu profilinizin erişebileceği bir yere klonlayın, örn. `$DSH_HOME/dsh-locale-tr`:
+1. Eklentiyi web profiline ekleyin (pnpm gerektirir; `dsh plugin` pnpm'e devreder).
+
+   **npm'den (önerilen):**
+
+   ```bash
+   dsh plugin --profile web add dsh-locale-tr
+   ```
+
+   **veya git ile (kaynaktan):**
 
    ```bash
    git clone https://github.com/aytacbilgisayar-hub/dsh-locale-tr.git "$DSH_HOME/dsh-locale-tr"
-   ```
-
-2. Web profiline eklenti olarak ekleyin (pnpm gerektirir; `dsh plugin` pnpm'e devreder):
-
-   ```bash
    dsh plugin --profile web add "$DSH_HOME/dsh-locale-tr"
    ```
 
-3. `$DSH_HOME/profiles/web/cordis.patch.yml` dosyasının sonuna, eklentiyi
+2. `$DSH_HOME/profiles/web/cordis.patch.yml` dosyasının sonuna, eklentiyi
    etkinleştiren bir `insert:` girdisi ekleyin:
 
    ```yaml
@@ -42,7 +45,7 @@ varsayılır (`$DSH_HOME/profiles/web`).
          name: dsh-locale-tr
    ```
 
-4. `dsh web`'i (yeniden) başlatın. Ayarlar → Genel'de **Türkçe** seçeneği belirir.
+3. `dsh web`'i (yeniden) başlatın. Ayarlar → Genel'de **Türkçe** seçeneği belirir.
    Kalıcı seçim için `$DSH_HOME/settings.yaml` içine şunu koyabilirsiniz:
 
    ```yaml
@@ -113,9 +116,11 @@ package uses dsh's documented *external language-pack* mechanism to register the
 `tr` locale and translates **1147 strings across 38 UI namespaces**. Untranslated
 strings fall back to English, so nothing breaks.
 
-**Install:** clone into a location your web profile can resolve (e.g.
-`$DSH_HOME/dsh-locale-tr`), run `dsh plugin --profile web add "$DSH_HOME/dsh-locale-tr"`,
-then append to `$DSH_HOME/profiles/web/cordis.patch.yml`:
+**Install:** add it to the web profile — from npm (recommended)
+`dsh plugin --profile web add dsh-locale-tr`, or from source
+(`git clone https://github.com/aytacbilgisayar-hub/dsh-locale-tr.git "$DSH_HOME/dsh-locale-tr"`
+then `dsh plugin --profile web add "$DSH_HOME/dsh-locale-tr"`). Then append to
+`$DSH_HOME/profiles/web/cordis.patch.yml`:
 
 ```yaml
 - insert:
