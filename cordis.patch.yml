@@ -1,0 +1,6 @@
+# ============ TURKCE ARAYUZ DILI ============
+# Out-of-tree client plugin: dsh-locale-tr
+# @deepseek-ai/dsh-client-locale'e 'tr' dilini ekler (fallback: en).
+- insert:
+    - id: locale-tr
+      name: dsh-locale-tr
