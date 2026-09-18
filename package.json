@@ -1,2 +1,66 @@
 {
+<<<<<<< HEAD
   "name": "dsh-locale-tr",
+=======
+  "name": "dsh-locale-tr",
+<<<<<<< HEAD
+  "version": "0.1.0",
+=======
+  "version": "0.2.0",
+>>>>>>> f09fa2a (feat: v0.2.0 - DeepSeek Harness (DSH) Türkçe Dil Paketi Güncellemesi\n\nBu güncelleme paketi v0.1.6-alpha.2 sürümüne uyumlu hale getirir ve aşağıdaki değişiklikleri içerir:\n\n- **Eksik Çeviriler Eklendi**: Yeni DSH arayüzünden çıkarılan 474 yeni İngilizce anahtar translations.json dosyasına eklendi. Toplam 47 namespace ve 1621 çeviri anahtarına ulaşıldı.\n- **Yeni Plugin Formatına Dönüştürme**: Paket, DSH'nin v0.1.6 sürümündeki yeni bundle formatına uygun hale getirildi. package.json dosyasına `dsh.bundle.patch: ./cordis.patch.yml` tanımı eklendi ve gerekli `cordis.patch.yml` dosyası oluşturuldu.\n- **Eski Profil Girişi Kaldırıldı**: Çakışmaları önlemek amacıyla, profilin `cordis.patch.yml` dosyasındaki eski `dsh-locale-tr` girişi kaldırıldı.\n- **Dokümantasyon Güncellemeleri**: README.md ve README-KURULUM.md dosyaları güncel istatistikleri ve yeni kurulum yöntemini yansıtacak şekilde güncellendi.\n- **Sürüm Güncellemesi**: package.json'daki sürüm 0.1.0'dan 0.2.0'a yükseltildi.\n\nYeni kurulum için `plugin_manager install_bundle C:\Users\hasan\.dsh\dsh-locale-tr` komutunu kullanın.)
+  "description": "Turkish (Türkçe) language pack for DeepSeek Harness (dsh) — a client plugin that registers the 'tr' UI locale.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "src/translations.json",
+    "src/client.js"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "dsh": {
+<<<<<<< HEAD
+    "client": {
+      "inject": ["@deepseek-ai/dsh-client-locale"],
+=======
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ],
+>>>>>>> f09fa2a (feat: v0.2.0 - DeepSeek Harness (DSH) Türkçe Dil Paketi Güncellemesi\n\nBu güncelleme paketi v0.1.6-alpha.2 sürümüne uyumlu hale getirir ve aşağıdaki değişiklikleri içerir:\n\n- **Eksik Çeviriler Eklendi**: Yeni DSH arayüzünden çıkarılan 474 yeni İngilizce anahtar translations.json dosyasına eklendi. Toplam 47 namespace ve 1621 çeviri anahtarına ulaşıldı.\n- **Yeni Plugin Formatına Dönüştürme**: Paket, DSH'nin v0.1.6 sürümündeki yeni bundle formatına uygun hale getirildi. package.json dosyasına `dsh.bundle.patch: ./cordis.patch.yml` tanımı eklendi ve gerekli `cordis.patch.yml` dosyası oluşturuldu.\n- **Eski Profil Girişi Kaldırıldı**: Çakışmaları önlemek amacıyla, profilin `cordis.patch.yml` dosyasındaki eski `dsh-locale-tr` girişi kaldırıldı.\n- **Dokümantasyon Güncellemeleri**: README.md ve README-KURULUM.md dosyaları güncel istatistikleri ve yeni kurulum yöntemini yansıtacak şekilde güncellendi.\n- **Sürüm Güncellemesi**: package.json'daki sürüm 0.1.0'dan 0.2.0'a yükseltildi.\n\nYeni kurulum için `plugin_manager install_bundle C:\Users\hasan\.dsh\dsh-locale-tr` komutunu kullanın.)
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "locale",
+    "i18n",
+    "l10n",
+    "turkish",
+    "turkce",
+    "türkçe"
+  ],
+  "author": "Hasan Aytaç <aytacbilgisayar@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aytacbilgisayar-hub/dsh-locale-tr.git"
+  },
+  "homepage": "https://github.com/aytacbilgisayar-hub/dsh-locale-tr#readme",
+  "bugs": {
+    "url": "https://github.com/aytacbilgisayar-hub/dsh-locale-tr/issues"
+  }
+}
+>>>>>>> 24d1e37 (feat: v0.2.0 - DeepSeek Harness (DSH) Türkçe Dil Paketi Güncellemesi\n\nBu güncelleme paketi v0.1.6-alpha.2 sürümüne uyumlu hale getirir ve aşağıdaki değişiklikleri içerir:\n\n- **Eksik Çeviriler Eklendi**: Yeni DSH arayüzünden çıkarılan 474 yeni İngilizce anahtar translations.json dosyasına eklendi. Toplam 47 namespace ve 1621 çeviri anahtarına ulaşıldı.\n- **Yeni Plugin Formatına Dönüştürme**: Paket, DSH'nin v0.1.6 sürümündeki yeni bundle formatına uygun hale getirildi. package.json dosyasına `dsh.bundle.patch: ./cordis.patch.yml` tanımı eklendi ve gerekli `cordis.patch.yml` dosyası oluşturuldu.\n- **Eski Profil Girişi Kaldırıldı**: Çakışmaları önlemek amacıyla, profilin `cordis.patch.yml` dosyasındaki eski `dsh-locale-tr` girişi kaldırıldı.\n- **Dokümantasyon Güncellemeleri**: README.md ve README-KURULUM.md dosyaları güncel istatistikleri ve yeni kurulum yöntemini yansıtacak şekilde güncellendi.\n- **Sürüm Güncellemesi**: package.json'daki sürüm 0.1.0'dan 0.2.0'a yükseltildi.\n\nYeni kurulum için `plugin_manager install_bundle C:\Users\hasan\.dsh\dsh-locale-tr` komutunu kullanın.)
