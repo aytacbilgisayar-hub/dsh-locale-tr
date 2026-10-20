@@ -1,6 +1,6 @@
 {
   "name": "dsh-locale-tr",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Turkish (Türkçe) language pack for DeepSeek Harness (dsh) — a client plugin that registers the 'tr' UI locale.",
   "type": "module",
   "main": "lib/index.js",
@@ -12,7 +12,8 @@
   "files": [
     "lib/",
     "src/translations.json",
-    "src/client.js"
+    "src/client.js",
+    "cordis.patch.yml"
   ],
   "scripts": {
     "build": "node scripts/build.mjs"

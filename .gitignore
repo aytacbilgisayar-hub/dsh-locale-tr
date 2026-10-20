@@ -2,5 +2,9 @@ node_modules/
 *.log
 .DS_Store
 npm-debug.log*
+extracted-*.json
+missing-keys.json
+release_payload.json
+*.backup*
 # Kişisel kurulum notu — repoya dahil değil
 README-KURULUM.md
